@@ -291,11 +291,11 @@ html {
   background-color: #222020;
   display: flex;
   align-items: center;
-  padding: 0 10rem;
+  padding: 5% 10rem 0;
   position: relative;
 }
 
-.section-heading {
+.section-2-heading {
   font-size: 10rem;
   font-family: "Oswald", sans-serif;
   font-weight: 300;
@@ -313,7 +313,7 @@ html {
   width: 100rem;
   height: 50rem;
   position: absolute;
-  top: 5rem;
+  top: 10%;
   right: 15rem;
   box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, 0.7);
   overflow: hidden;
@@ -377,7 +377,7 @@ html {
 .section-2-paragraph {
   width: 100rem;
   position: absolute;
-  bottom: 8rem;
+  bottom: 15%;
   right: 15rem;
   font-size: 2rem;
   line-height: 1.5;
@@ -416,6 +416,14 @@ html {
   display: flex;
   align-items: center;
   padding-left: 10rem;
+}
+
+.section-3-heading {
+  font-size: 10rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  color: #ddd;
+  margin-right: 4rem;
 }
 
 .pricing-cards-wrapper {
@@ -667,6 +675,7 @@ html {
   .section-2-paragraph {
     width: 90rem;
     right: 10rem;
+    bottom: 20%;
   }
 
   .section-3 .section-heading-line {
@@ -680,15 +689,16 @@ html {
   }
 
   .video-wrapper {
-    width: 85rem;
+    width: 95rem;
     height: 40rem;
     right: 5rem;
+    top: 15%;
   }
 
   .section-2-paragraph {
-    width: 85rem;
+    width: 95rem;
     right: 5rem;
-    bottom: 10rem;
+    bottom: 15%
   }
 }
 
@@ -719,20 +729,21 @@ html {
   }
 
   .section-2 {
-    height: 120vh;
+    height: 100vh;
   }
 
   .video-wrapper {
     top: 20%;
     left: 50%;
+    width: 100rem;
     transform: translateX(-50%);
-    width: 80rem;
   }
 
   .section-2-paragraph {
     left: 50%;
     transform: translateX(-50%);
-    width: 80rem;
+    width: 100rem;
+    bottom: 25%;
   }
 
   .section-3 {
@@ -769,6 +780,10 @@ html {
 
   .banner-heading span {
     font-size: 8rem;
+  }
+
+  .section-2-paragraph{
+    bottom: 20%;
   }
 
   .footer {
