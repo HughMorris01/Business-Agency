@@ -287,11 +287,13 @@ html {
 /* Section 2 */
 .section-2 {
   width: 100%;
-  height: 110vh;
+  height: fit-content;
+  min-height: 120vh;
+  padding: 0 5%;
   background-color: #222020;
   display: flex;
-  align-items: center;
-  padding: 5% 10rem 0;
+  align-items: stretch;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -300,7 +302,10 @@ html {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   color: #ddd;
-  margin-right: 4rem;
+  position: absolute;
+  left: 10rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .section-heading-line {
@@ -309,12 +314,27 @@ html {
   background-color: #ddd;
 }
 
-.video-wrapper {
-  width: 100rem;
-  height: 50rem;
+.section-2-heading-line {
+  width: 15rem;
+  height: 0.2rem;
+  background-color: #ddd;
   position: absolute;
-  top: 10%;
-  right: 15rem;
+  top:50%;
+  left: 45rem;
+}
+
+.media-wrapper {
+  width: 90%;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: 50rem;
+  position: relative;
   box-shadow: 3rem 3rem 6rem rgba(0, 0, 0, 0.7);
   overflow: hidden;
 }
@@ -375,16 +395,12 @@ html {
 }
 
 .section-2-paragraph {
-  width: 100rem;
-  position: absolute;
-  bottom: 15%;
-  right: 15rem;
+  width: 100%;
   font-size: 2rem;
   line-height: 1.5;
   color: #ddd;
   border-top: 0.3rem double #aaa;
   border-bottom: 0.3rem double #aaa;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -555,6 +571,14 @@ html {
   padding: 0 10rem;
 }
 
+.section-4-heading {
+  font-size: 10rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  color: #ddd;
+  margin-right: 4rem;
+}
+
 .contact-wrapper {
   width: 80%;
   display: flex;
@@ -666,16 +690,8 @@ html {
 
 /* Responsive */
 @media (max-width: 1800px) {
-  .video-wrapper {
-    width: 90rem;
-    height: 45rem;
-    right: 10rem;
-  }
-
-  .section-2-paragraph {
-    width: 90rem;
-    right: 10rem;
-    bottom: 20%;
+  .media-wrapper{
+    max-width: 90rem;
   }
 
   .section-3 .section-heading-line {
@@ -687,23 +703,13 @@ html {
   html {
     font-size: 57%;
   }
-
-  .video-wrapper {
-    width: 95rem;
-    height: 40rem;
-    right: 5rem;
-    top: 15%;
-  }
-
-  .section-2-paragraph {
-    width: 95rem;
-    right: 5rem;
-    bottom: 15%
-  }
 }
 
 @media (max-width: 1500px) {
   .section-heading-line {
+    display: none;
+  }
+  .section-2-heading-line {
     display: none;
   }
 }
@@ -722,37 +728,32 @@ html {
     font-size: 3rem;
   }
 
-  .section-2,
-  .section-3,
-  .section-4 {
-    flex-direction: column;
+  .section-2-heading {
+    position: static;
+  }
+
+  .media-wrapper {
+    height: 80vh;
+    justify-content: space-between;
   }
 
   .section-2 {
     height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .video-wrapper {
-    top: 20%;
-    left: 50%;
-    width: 100rem;
-    transform: translateX(-50%);
-  }
 
-  .section-2-paragraph {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100rem;
-    bottom: 25%;
+  .section-3,
+  .section-4 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .section-3 {
-    height: auto;
-    padding: 5rem 0 10rem 0;
-  }
-
-  .section-3 .section-heading {
-    margin-bottom: 7rem;
+    height: 100vh;
   }
 
   .swiper-container {
@@ -760,8 +761,11 @@ html {
   }
 
   .section-4 {
-    height: auto;
-    padding: 5rem 0;
+    height: 100vh;
+  }
+
+  .footer {
+    height: 15vh;
   }
 }
 
@@ -782,10 +786,6 @@ html {
     font-size: 8rem;
   }
 
-  .section-2-paragraph{
-    bottom: 20%;
-  }
-
   .footer {
     padding: 0 5rem;
   }
@@ -800,8 +800,8 @@ html {
     font-size: 35%;
   }
 
-  .section-2 {
-    height: 100vh;
+  .media-wrapper {
+    justify-content: space-around;
   }
 
   .contact-details div {
@@ -858,14 +858,6 @@ html {
       opacity: 0;
       letter-spacing: 2rem;
     }
-  }
-
-  .video-wrapper {
-    width: 60rem;
-  }
-
-  .section-2-paragraph {
-    width: 60rem;
   }
 
   .contact-details div {

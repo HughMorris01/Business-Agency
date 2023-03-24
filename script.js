@@ -1,10 +1,17 @@
 //Navbar
 const menu = document.querySelector('.menu');
 const navbar = document.querySelector('.navbar');
+const navLinks = document.querySelectorAll('.nav-link');
 
 menu.addEventListener('click', () => {
     navbar.classList.toggle('change');
     menu.classList.toggle('change');
+})
+
+navLinks.forEach(link =>{
+    link.addEventListener('click', ()=>{
+        navbar.classList.remove('change');
+    })
 })
 //End of Navbar
 
