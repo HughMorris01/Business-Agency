@@ -11,6 +11,7 @@ menu.addEventListener('click', () => {
 navLinks.forEach(link =>{
     link.addEventListener('click', ()=>{
         navbar.classList.remove('change');
+        menu.classList.remove('change');
     })
 })
 //End of Navbar
